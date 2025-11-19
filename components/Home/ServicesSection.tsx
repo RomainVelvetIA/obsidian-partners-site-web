@@ -29,13 +29,13 @@ const services: ServiceCard[] = [
     icon: Settings,
     title: 'Audit Approfondi',
     description:
-      "Vous souhaitez intégrer l'IA mais ne savez pas par où commencer ? Nous menons un audit complet de vos processus métiers pour identifier puis livrer les solutions d'optimisation.",
+      "Vous souhaitez intégrer l&apos;IA mais ne savez pas par où commencer ? Nous menons un audit complet de vos processus métiers pour identifier puis livrer les solutions d&apos;optimisation.",
     features: [
       'Évaluation complète de vos systèmes existants',
       'Cartographie de vos processus métiers',
       'Identification des inefficacités et des risques',
-      'Rédaction d\'un cahier des charges détaillé',
-      'Recommandations d\'optimisation et plan d\'action'
+      'Rédaction d&apos;un cahier des charges détaillé',
+      'Recommandations d&apos;optimisation et plan d&apos;action'
     ]
   }
 ];
@@ -52,10 +52,10 @@ export default function ServicesSection() {
           className="mb-16 text-center"
         >
           <h2 className="mb-4 text-4xl font-extralight text-[#0f172a] md:text-5xl">
-            L'Art de Comprendre
+            L&apos;Art de Comprendre
           </h2>
           <p className="mx-auto max-w-2xl text-lg font-light text-[#374151]">
-            Notre méthode d'Audit et d'Analyse
+            Notre méthode d&apos;Audit et d&apos;Analyse
           </p>
         </motion.div>
 

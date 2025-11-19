@@ -99,3 +99,4 @@ Le fichier `netlify.toml` est déjà configuré avec :
 - [Documentation Netlify](https://docs.netlify.com)
 - [Plugin Next.js Netlify](https://github.com/netlify/netlify-plugin-nextjs)
 
+

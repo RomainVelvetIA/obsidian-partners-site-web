@@ -1,5 +1,6 @@
 import Header from '@/components/Home/Header';
 import HeroSection from '@/components/Home/HeroSection';
+import LeadMagnetSection from '@/components/Home/LeadMagnetSection';
 import ServicesSection from '@/components/Home/ServicesSection';
 import ProblemsSection from '@/components/Home/ProblemsSection';
 import ProcessSection from '@/components/Home/ProcessSection';
@@ -15,6 +16,7 @@ export default function HomePage() {
       <Header />
       <main>
         <HeroSection />
+        <LeadMagnetSection />
         <ServicesSection />
         <ProblemsSection />
         <ProcessSection />

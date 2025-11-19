@@ -80,7 +80,7 @@ const auditSteps: StepCard[] = [
     icon: Settings,
     number: '04',
     title: "Recommandations structurées et feuille de route priorisée",
-    description: "Nous vous livrons le cahier des charges, ainsi qu'un plan d'action clair, classé, mentionnant les meilleures solutions du marché sélectionnées.",
+    description: "Nous vous livrons le cahier des charges, ainsi qu\'un plan d\'action clair, classé, mentionnant les meilleures solutions du marché sélectionnées.",
     duration: 'Variable'
   }
 ];
