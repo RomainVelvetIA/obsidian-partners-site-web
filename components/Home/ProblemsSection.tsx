@@ -1,6 +1,6 @@
 'use client';
 
-import { motion } from '@/components/Home/framer-motion';
+import { motion } from 'framer-motion';
 import type { LucideIcon } from 'lucide-react';
 import { Clock, Shield, Target, TrendingUp, Users, Zap } from 'lucide-react';
 

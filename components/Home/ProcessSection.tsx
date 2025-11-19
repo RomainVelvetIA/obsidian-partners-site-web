@@ -27,8 +27,8 @@ const analysisSteps: StepCard[] = [
   {
     icon: MessageCircle,
     number: '01',
-    title: 'Recueil de l’Information',
-    description: 'Collecte d’informations pour comprendre vos objectifs stratégiques, vos processus internes et vos problématiques actuelles.',
+    title: 'Recueil de l\'Information',
+    description: 'Collecte d\'informations pour comprendre vos objectifs stratégiques, vos processus internes et vos problématiques actuelles.',
     duration: '1 jour'
   },
   {
@@ -59,25 +59,29 @@ const auditSteps: StepCard[] = [
     icon: Map,
     number: '01',
     title: 'Cartographie complète de votre fonctionnement',
-    description: "Analyse complète de vos processus pour comprendre précisément comment votre entreprise crée, transfère et utilise l’information quotidiennement.",
+    description: "Analyse complète de vos processus pour comprendre précisément comment votre entreprise crée, transfère et utilise l\'information quotidiennement.",
+    duration: 'Variable'
   },
   {
     icon: BarChart3,
     number: '02',
     title: "Détection des frictions et inefficiences cachées",
     description: 'Identification des tâches répétitives et chronophages, ainsi que les pertes de temps qui impactent votre performance opérationnelle.',
+    duration: 'Variable'
   },
   {
     icon: Target,
     number: '03',
-    title: 'Analyse du potentiel d’automatisation et d’IA',
-    description: 'Nous évaluons chaque opportunité pour déterminer où l’intelligence artificielle peut générer des gains immédiats et mesurables puis rédigeons un cahier des charges.',
+    title: 'Analyse du potentiel d\'automatisation et d\'IA',
+    description: 'Nous évaluons chaque opportunité pour déterminer où l\'intelligence artificielle peut générer des gains immédiats et mesurables puis rédigeons un cahier des charges.',
+    duration: 'Variable'
   },
   {
     icon: Settings,
     number: '04',
     title: "Recommandations structurées et feuille de route priorisée",
-    description: "Nous vous livrons le cahier des charges, ainsi qu’un plan d’action clair, classé, mentionnant les meilleures solutions du marché sélectionnées.",
+    description: "Nous vous livrons le cahier des charges, ainsi qu\'un plan d\'action clair, classé, mentionnant les meilleures solutions du marché sélectionnées.",
+    duration: 'Variable'
   }
 ];
 

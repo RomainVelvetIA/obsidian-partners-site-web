@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { ArrowRight, Sparkles } from 'lucide-react';
-import { Button } from '@/components/Home/ui/button';
+import { Button } from '@/components/ui/button';
 
 export default function HeroSection() {
   const scrollToSection = (id: string) => {
