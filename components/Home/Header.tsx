@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { Search } from 'lucide-react';
 
@@ -12,17 +13,13 @@ export default function Header() {
   const [searchQuery, setSearchQuery] = useState('');
   const [isSearchFocused, setIsSearchFocused] = useState(false);
 
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  };
-
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault();
     if (searchQuery.trim()) {
       // Recherche dans les sections de la page
       const sections = document.querySelectorAll('section[id], h2, h3, p');
       const query = searchQuery.toLowerCase();
-      
+
       for (const element of Array.from(sections)) {
         if (element.textContent?.toLowerCase().includes(query)) {
           element.scrollIntoView({ behavior: 'smooth', block: 'center' });
@@ -44,9 +41,8 @@ export default function Header() {
           transition={{ duration: 0.8 }}
           className="flex items-center justify-between gap-4"
         >
-          <button
-            type="button"
-            onClick={scrollToTop}
+          <Link
+            href="/"
             className="inline-flex items-center gap-2 md:gap-3 transition-all duration-300 hover:scale-105 flex-shrink-0"
           >
             <Image
@@ -59,13 +55,23 @@ export default function Header() {
             <span className="text-sm md:text-base lg:text-xl font-light text-[#0f172a] whitespace-nowrap">
               Obsidian <span className="font-normal text-[#1e3a8a]">Partners</span>
             </span>
-          </button>
+          </Link>
 
-          <form onSubmit={handleSearch} className="flex-1 max-w-md ml-auto">
+          <div className="flex-1" />
+
+          <nav className="hidden md:flex items-center gap-6 mr-6">
+            <a
+              href="/blog"
+              className="text-sm lg:text-base font-light text-[#0f172a] hover:text-[#1e3a8a] transition-colors"
+            >
+              Blog
+            </a>
+          </nav>
+
+          <form onSubmit={handleSearch} className="flex-1 max-w-md">
             <div
-              className={`relative flex items-center rounded-xl transition-all duration-300 ${
-                isSearchFocused ? 'scale-[1.02]' : ''
-              }`}
+              className={`relative flex items-center rounded-xl transition-all duration-300 ${isSearchFocused ? 'scale-[1.02]' : ''
+                }`}
               style={{
                 background: '#e0e5ec',
                 boxShadow: isSearchFocused
