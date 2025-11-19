@@ -59,10 +59,34 @@ export default function Header() {
 
           <div className="flex-1" />
 
-          <nav className="hidden md:flex items-center gap-6 mr-6">
+          <nav className="hidden md:flex items-center gap-6 lg:gap-8">
+            <a
+              href="/#services"
+              className="text-sm lg:text-base font-light text-[#0f172a] hover:text-[#1e3a8a] transition-colors whitespace-nowrap"
+            >
+              Services
+            </a>
+            <a
+              href="/#process"
+              className="text-sm lg:text-base font-light text-[#0f172a] hover:text-[#1e3a8a] transition-colors whitespace-nowrap"
+            >
+              Processus
+            </a>
+            <a
+              href="/#clients"
+              className="text-sm lg:text-base font-light text-[#0f172a] hover:text-[#1e3a8a] transition-colors whitespace-nowrap"
+            >
+              Clients
+            </a>
+            <a
+              href="/#faq"
+              className="text-sm lg:text-base font-light text-[#0f172a] hover:text-[#1e3a8a] transition-colors whitespace-nowrap"
+            >
+              FAQ
+            </a>
             <a
               href="/blog"
-              className="text-sm lg:text-base font-light text-[#0f172a] hover:text-[#1e3a8a] transition-colors"
+              className="text-sm lg:text-base font-light text-[#0f172a] hover:text-[#1e3a8a] transition-colors whitespace-nowrap"
             >
               Blog
             </a>

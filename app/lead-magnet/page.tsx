@@ -1,6 +1,8 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
+import Image from 'next/image';
+import Link from 'next/link';
 import { AnimatePresence } from 'framer-motion';
 import WelcomeStep from '@/components/LeadMagnet/WelcomeStep';
 import QuizStep from '@/components/LeadMagnet/QuizStep';
@@ -19,6 +21,9 @@ import { getToolRecommendations } from '@/lib/leadMagnet/toolsDatabase';
 import { generatePDFReport } from '@/lib/leadMagnet/reportGenerator';
 import { submitLead } from '@/lib/leadMagnet/leadCapture';
 import './styles.css';
+
+const logoUrl =
+    'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/691b66a04c81a902668a15c7/c1dcec10b_Ajouteruntitre1.png';
 
 export default function LeadMagnetPage() {
     const [state, setState] = useState<AppState>({
@@ -159,10 +164,29 @@ export default function LeadMagnetPage() {
 
     return (
         <div className="min-h-screen bg-[#e0e5ec] text-[#0f172a] font-sans selection:bg-blue-500 selection:text-white overflow-x-hidden">
+            {/* Logo Header */}
+            <div className="fixed top-0 left-0 right-0 z-50 px-4 py-3 md:px-6 md:py-4" style={{ background: 'rgba(224, 229, 236, 0.95)', backdropFilter: 'blur(10px)' }}>
+                <Link
+                    href="/"
+                    className="inline-flex items-center gap-2 md:gap-3 transition-all duration-300 hover:scale-105"
+                >
+                    <Image
+                        src={logoUrl}
+                        alt="Obsidian Partners"
+                        width={48}
+                        height={48}
+                        className="h-8 w-8 md:h-10 md:w-10 object-contain"
+                    />
+                    <span className="text-sm md:text-base lg:text-lg font-light text-[#0f172a] whitespace-nowrap">
+                        Obsidian <span className="font-normal text-[#1e3a8a]">Partners</span>
+                    </span>
+                </Link>
+            </div>
+
             {/* Background Effects - Removed dark blobs, kept clean neumorphic background */}
 
             {/* Progress Bar */}
-            <div className="fixed top-0 left-0 w-full h-1 bg-[#bec3c9] z-50">
+            <div className="fixed top-[60px] md:top-[68px] left-0 w-full h-1 bg-[#bec3c9] z-50">
                 <div
                     className="h-full bg-[#1e3a8a] transition-all duration-500 ease-out"
                     style={{ width: `${getProgress()}%` }}
@@ -170,7 +194,7 @@ export default function LeadMagnetPage() {
             </div>
 
             {/* Main Content */}
-            <main className="relative z-10 container mx-auto px-4 py-12 min-h-screen flex flex-col justify-center">
+            <main className="relative z-10 container mx-auto px-4 py-12 pt-24 md:pt-28 min-h-screen flex flex-col justify-center">
                 <AnimatePresence mode="wait">
                     {step === 'welcome' && (
                         <WelcomeStep key="welcome" onNext={handleWelcomeNext} />
