@@ -4,7 +4,23 @@ import './globals.css';
 export const metadata: Metadata = {
   title: 'Obsidian Partners | Courtage en IA',
   description:
-    "Obsidian Partners conçoit des parcours d'adoption de l'intelligence artificielle sur mesure pour les entreprises B2B."
+    "Obsidian Partners conçoit des parcours d'adoption de l'intelligence artificielle sur mesure pour les entreprises B2B.",
+  icons: {
+    icon: '/favicon.png',
+    shortcut: '/favicon.png',
+    apple: '/favicon.png',
+  },
+  openGraph: {
+    title: 'Obsidian Partners | Courtage en IA',
+    description: "Obsidian Partners conçoit des parcours d'adoption de l'intelligence artificielle sur mesure pour les entreprises B2B.",
+    type: 'website',
+    locale: 'fr_FR',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Obsidian Partners | Courtage en IA',
+    description: "Obsidian Partners conçoit des parcours d'adoption de l'intelligence artificielle sur mesure pour les entreprises B2B.",
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
