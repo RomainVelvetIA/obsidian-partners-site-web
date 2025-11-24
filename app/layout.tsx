@@ -26,6 +26,11 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="fr">
+      <head>
+        {/* Preconnect to external domains for performance */}
+        <link rel="preconnect" href="https://cdn.sanity.io" />
+        <link rel="preconnect" href="https://qtrypzzcjebvfcihiynt.supabase.co" />
+      </head>
       <body>{children}</body>
     </html>
   );

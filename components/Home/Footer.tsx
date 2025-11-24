@@ -18,7 +18,7 @@ export default function Footer() {
   return (
     <footer className="border-t border-[#bec3c9]/30 px-4 py-12 md:px-6 md:py-16">
       <div className="mx-auto max-w-7xl">
-        <div className="mb-12 grid gap-12 md:grid-cols-3">
+        <div className="mb-12 grid gap-12 md:grid-cols-4">
           <div className="md:col-span-2">
             <h3 className="mb-4 text-2xl font-light text-[#0f172a]">Obsidian Partners</h3>
             <p className="mb-6 font-light leading-relaxed text-[#374151]">
@@ -49,6 +49,28 @@ export default function Footer() {
                   </button>
                 </li>
               ))}
+            </ul>
+          </div>
+
+          <div>
+            <h4 className="mb-4 text-lg font-light text-[#0f172a]">Ressources</h4>
+            <ul className="space-y-3">
+              <li>
+                <Link
+                  href="/blog"
+                  className="font-light text-[#374151] transition-colors hover:text-[#1e3a8a]"
+                >
+                  Blog
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/lead-magnet"
+                  className="font-light text-[#374151] transition-colors hover:text-[#1e3a8a]"
+                >
+                  Calculateur ROI
+                </Link>
+              </li>
             </ul>
           </div>
         </div>

@@ -10,6 +10,9 @@ import { urlFor } from '@/lib/sanity/image';
 import Header from '@/components/Home/Header';
 import Footer from '@/components/Home/Footer';
 import BlogContent from '@/components/Blog/BlogContent';
+import Breadcrumbs from '@/components/Blog/Breadcrumbs';
+import RelatedArticles from '@/components/Blog/RelatedArticles';
+import { getBreadcrumbSchema, renderStructuredData } from '@/lib/seo/structuredData';
 
 interface BlogPostPageProps {
     params: {
@@ -99,17 +102,36 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
         description: post.excerpt || '',
     };
 
+    // Breadcrumb structured data
+    const breadcrumbSchema = getBreadcrumbSchema([
+        { name: 'Accueil', url: 'https://obsidianpartners.fr' },
+        { name: 'Blog', url: 'https://obsidianpartners.fr/blog' },
+        { name: post.title },
+    ]);
+
     return (
         <>
             <script
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
             />
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={renderStructuredData(breadcrumbSchema)}
+            />
             <div className="min-h-screen bg-gradient-to-br from-[#e0e5ec] via-[#e8edf4] to-[#dce1e8]">
                 <Header />
                 <main>
                     <article className="px-4 pt-32 pb-20 md:pt-40">
                         <div className="mx-auto max-w-4xl">
+                            {/* Breadcrumb Navigation */}
+                            <Breadcrumbs
+                                items={[
+                                    { name: 'Blog', href: '/blog' },
+                                    { name: post.title },
+                                ]}
+                            />
+
                             <Link
                                 href="/blog"
                                 className="inline-flex items-center gap-2 text-[#1e3a8a] hover:text-[#1e40af] transition-colors mb-8 font-light"
@@ -170,6 +192,12 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                                     <BlogContent content={post.body} />
                                 </div>
                             )}
+
+                            {/* Related Articles */}
+                            <RelatedArticles
+                                currentPostId={post._id}
+                                categories={post.categories}
+                            />
                         </div>
                     </article>
                 </main>
