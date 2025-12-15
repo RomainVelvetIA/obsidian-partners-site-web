@@ -74,6 +74,10 @@ export default function LeadMagnetPage() {
     }, [state]);
 
     const handleWelcomeNext = () => {
+        if (typeof window !== 'undefined') {
+            (window as any).dataLayer = (window as any).dataLayer || [];
+            (window as any).dataLayer.push({ event: 'lead_magnet_start' });
+        }
         setStep('quiz');
     };
 
@@ -97,6 +101,13 @@ export default function LeadMagnetPage() {
     };
 
     const handleLeadSubmit = async (data: Partial<LeadData>) => {
+        if (typeof window !== 'undefined') {
+            (window as any).dataLayer = (window as any).dataLayer || [];
+            (window as any).dataLayer.push({
+                event: 'generate_lead',
+                lead_type: 'magnet_quiz'
+            });
+        }
         const leadData = { ...data, timestamp: new Date().toISOString() };
         setState((prev) => ({
             ...prev,

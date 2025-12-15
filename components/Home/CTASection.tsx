@@ -41,6 +41,8 @@ export default function CTASection() {
             <a
               href="https://cal.com/romain-auroux-cwofup/obsidian-partners"
               target="_blank"
+              id="booking-cta-btn"
+              data-event="booking_click"
               rel="noopener noreferrer"
               className="group inline-flex items-center gap-2 md:gap-3 rounded-2xl px-6 py-3 md:px-8 md:py-4 text-base md:text-lg font-light text-[#0f172a] transition-all duration-300"
               style={{ background: '#e0e5ec', boxShadow: '8px 8px 16px #bec3c9, -8px -8px 16px #ffffff' }}
